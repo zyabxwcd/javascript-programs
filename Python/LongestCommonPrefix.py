@@ -8,27 +8,11 @@ class Solution:
             return ''
         elif len(strs) == 1:
             return strs[0]
-        dict = {}
-        for word in strs:
-            if word[0] in dict:
-                dict[word[0]].append(word)
-            else:
-                dict[word[0]] = [word]
-        prefixes = []
-        for letter in dict:
-            if len(dict[letter]) > 1:
-                prefixes.append(self.commonprefix(dict[letter]))
-        longest = ''
-        for prefix in prefixes:
-            if len(prefix) > len(longest):
-                longest = prefix
-        return longest
-
-    def commonprefix(self, m):
-        if not m: return ''
-        s1 = min(m)
-        s2 = max(m)
-        for i, c in enumerate(s1):
-            if c != s2[i]:
-                return s1[:i]
+        
+        if not strs: return ''
+        s1 = min(strs)
+        s2 = max(strs)
+        for index, char in enumerate(s1):
+            if char != s2[index]:
+                return s1[:index]
         return s1
