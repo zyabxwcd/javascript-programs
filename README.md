@@ -1,2 +1,2 @@
-# javascript-programs
+# programs
 Programs made to practice
