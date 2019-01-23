@@ -1,3 +1,7 @@
+'''
+Program to make a BST with a method to find width at each level.
+'level' attribute is optional and can be removed if not required in any other functionality.
+'''
 class Node:
     counter = 0
     width = {0:1}
@@ -53,3 +57,9 @@ root.insert(24)
 print('Tree : ', end='')
 root.print_tree()
 print('\nWidth of Tree at each level :',root.width)
+
+'''
+Output :
+Tree : 1 5 6 10 19 20 21 22 23 24
+Width of Tree at each level : {0: 1, 1: 2, 2: 4, 3: 2, 4: 1}
+'''
