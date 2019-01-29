@@ -6,13 +6,14 @@ Program to make a BST with a method to find width at each level.
 
 class Node:
     counter = 0
+    # Level 0 width is set explicitly as we won't be using insert method for root of Tree.
     width = {0: 1}
 
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
-        self.level = 0
+        self.level = 0  # Optional for finding width using this approach
 
     def insert(self, data):
         if data < self.data:
