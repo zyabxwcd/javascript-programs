@@ -1,3 +1,8 @@
+'''
+Given a list of numbers print sub-arrays following a pattern of increasing or decreasing.
+'''
+
+
 def sub_arrays(array, inc=True):
     i = 0
     j = 1
@@ -26,9 +31,9 @@ def sub_arrays(array, inc=True):
                     j = i + 1
             else:
                 j += 1
-                
+
     print(array[i:j] if len(array[i:j]) != 1 else '', end='')
 
-
+# Input list of numbers
 array = [int(i) for i in input().split()]
 sub_arrays(array, inc=False)
