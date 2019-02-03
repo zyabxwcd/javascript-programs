@@ -1,6 +1,6 @@
 from pythonds.basic.stack import Stack
 
-def parChecker(string):
+def bracketChecker(string):
     bracket = ('(','{','[')
     s = Stack()
     balanced = True
@@ -23,4 +23,4 @@ def parChecker(string):
         return False
 
 string = input('Enter string: ')
-print(parChecker(string))
+print(bracketChecker(string))
